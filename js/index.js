@@ -49,8 +49,12 @@ $(function() {
         $('.location').text(location.name + ', ' + location.country);
         $('.temp_c').html(current.temp_c  + '<a class="cel"> ºC</a>');
         $('.temp_f').html(current.temp_f  + '<a class="fah"> ºF</a>');
+	$('.wind_kph').html(current.wind_kph  + '<a class="cel"> kph</a>');
+        $('.wind_mph').html(current.wind_mph  + '<a class="fah"> mph</a>');
+	$('.wind_dir').html(current.wind_dir);      
         $('.text').text(current.condition.text);
         $('.icon').attr('src', current.condition.icon);
+      
 	      
 // 	 function K2F(k){
 //     return Math.round(k*(9/5)-459.67);
