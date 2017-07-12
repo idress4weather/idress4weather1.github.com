@@ -47,21 +47,11 @@ $(function() {
         var location = response.location;
         var current = response.current;
         $('.location').text(location.name + ', ' + location.country);
-        $('.temp_c').html(current.temp_c  + '<a class="cel"> ºC</a>');
-        $('.temp_f').html(current.temp_f  + '<a class="fah"> ºF</a>');
-	$('.wind_kph').html(current.wind_kph  + '<a class="cel"> kph</a>');
-	                $(".cel").on('click', function(){
-            $(".wind_kph").toggle();
-            $(".wind_mph").toggle();
-          });
-        $('.wind_mph').html(current.wind_mph  + '<a class="fah"> mph</a>');
-	                $(".fan").on('click', function(){
-            $(".wind_kph").toggle();
-            $(".wind_mph").toggle();
-          });
+        $('.feelslike_c').html(current.feelslike_c  + '<a class="cel"> ºC</a>');
+        $('.feelslike_f').html(current.feelslike_f  + '<a class="fah"> ºF</a>');
+
 	$('.wind_dir').html(current.wind_dir);
-	$('.feelslike_c').html(current.feelslike_c  + '<a class="cel"> ºC</a>');
-        $('.feelslike_f').html(current.feelslike_f  + '<a class="fah"> ºF</a>');      
+      
         $('.text').text(current.condition.text);
         $('.icon').attr('src', current.condition.icon);
       
@@ -74,8 +64,8 @@ $(function() {
 //     return Math.round(k - 273.15);
 // }       
 	      
-var f = Math.round(current.temp_f);
-var c = Math.round(current.temp_c); 	      
+var f = Math.round(current.feelslike_f);
+var c = Math.round(current.feelslike_c); 	      
 var nextButton = document.getElementById('next-button');    
           
 var userFeed = new Instafeed({
