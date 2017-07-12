@@ -47,11 +47,21 @@ $(function() {
         var location = response.location;
         var current = response.current;
         $('.location').text(location.name + ', ' + location.country);
-        $('.temp_c').html(current.temp_c  + '<a class="cel"> ºC</a>');
+        $('.temp_c.feelslike_c').html(current.temp_c  + '<a class="cel"> ºC</a>' + current.feelslike_c  + '<a class="cel"> ºC</a>');
         $('.temp_f').html(current.temp_f  + '<a class="fah"> ºF</a>');
 	$('.wind_kph').html(current.wind_kph  + '<a class="cel"> kph</a>');
+	                $(".cel").on('click', function(){
+            $(".wind_kph").toggle();
+            $(".wind_mph").toggle();
+          });
         $('.wind_mph').html(current.wind_mph  + '<a class="fah"> mph</a>');
-	$('.wind_dir').html(current.wind_dir);      
+	                $(".fan").on('click', function(){
+            $(".wind_kph").toggle();
+            $(".wind_mph").toggle();
+          });
+	$('.wind_dir').html(current.wind_dir);
+	$('.feelslike_c').html(current.feelslike_c  + '<a class="cel"> ºC</a>');
+        $('.feelslike_f').html(current.feelslike_f  + '<a class="fah"> ºF</a>');      
         $('.text').text(current.condition.text);
         $('.icon').attr('src', current.condition.icon);
       
