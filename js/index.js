@@ -47,8 +47,8 @@ $(function() {
         var location = response.location;
         var current = response.current;
         $('.location').text(location.name + ', ' + location.country);
-        $('.feelslike_c').html(current.feelslike_c  + '<a class="cel"> ºC</a>');
-        $('.feelslike_f').html(current.feelslike_f  + '<a class="fah"> ºF</a>');
+        $('.temp_c').html(current.temp_c  + '<a class="cel"> ºC</a>');
+        $('.temp_f').html(current.temp_f  + '<a class="fah"> ºF</a>');
 
 	$('.wind_dir').html(current.wind_dir);
       
