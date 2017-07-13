@@ -14,7 +14,7 @@
     <link href="css/grayscale.min.css" rel="stylesheet">
     <link href="https://necolas.github.io/normalize.css/4.1.1/normalize.css" rel="stylesheet" />
 
-    <link href="css/main.css" rel="stylesheet" />
+    <!--link href="css/main.css" rel="stylesheet" /-->
 
     <script
         src="https://code.jquery.com/jquery-3.1.1.js"
@@ -22,16 +22,18 @@
         crossorigin="anonymous">
     </script>
 
-    <script src="js/main.js"></script>
-	
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/instafeed.js/instafeed.min.js"></script>
-<script src="js/index.js"></script>	
+<script src="js/indexBeta.js"></script>	
 </head>	
 <body>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+
+
 <form id="popupForm" name="f">    
     <select id="urlField" name="url">
         <option>
@@ -46,7 +48,21 @@
     </select>
     <div><input type="submit" /></div>    
 </form>
-<script>
+	<script>
+    $(document).ready(function(){
+        //Скрыть PopUp при загрузке страницы    
+        PopUpHide();
+    });
+    //Функция отображения PopUp
+    function PopUpShow(){
+        $("#popup1").show();
+    }
+    //Функция скрытия PopUp
+    function PopUpHide(){
+        $("#popup1").hide();
+    }
+</script>
+<!--script>
     $('#popupForm').submit(function(e) {
         e.preventDefault();
         var url = $('#urlField').val();
@@ -63,7 +79,7 @@
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdoaYX8GSvTZ5KEc-SA2Ad7VvTaW77V4vmYg7-Fq3wUHLqQYA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">!Go</iframe>
 	
-
+-->
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
 
