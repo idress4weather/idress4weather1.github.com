@@ -165,7 +165,17 @@ $(window).load(function() {
 			<a class="myButton" href="http://sergey-oganesyan.ru/">sergey-oganesyan.ru</a>
 		</center>
 
--->	
+-->
+	
+<script type=”text/javascript” src=”http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js”></script&gt;
+$(document).ready(function() {
+   //CloseImagePath is the path of the image used to close the popup,
+   //This variable is supplied as parameter to the popUp Function
+     var CloseImagePath = "App_Themes/Basic%20Green/images/closePopup.png";
+     popUp(CloseImagePath); // This function is written in PopUp.js
+});	
+
+</script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -261,16 +271,7 @@ $(window).load(function() {
 			
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-
-<script type=”text/javascript” src=”http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js”></script&gt;
-$(document).ready(function() {
-   //CloseImagePath is the path of the image used to close the popup,
-   //This variable is supplied as parameter to the popUp Function
-     var CloseImagePath = "App_Themes/Basic%20Green/images/closePopup.png";
-     popUp(CloseImagePath); // This function is written in PopUp.js
-});	
-
-</script>	
+	
 <style>
 
 #fade { 
