@@ -6,7 +6,8 @@
 function popUp(CloseImagePath){
 
         //When you click on a link with class of poplight and the href starts with a #
-        $('a.poplight[href^=#]').click(function() {
+        //$('a.poplight[href^=#]').click(function() {
+        $('a.poplight[href*=\\#]').click(function() {
             var popID = $(this).attr('rel'); //Get Popup Name
             var popURL = $(this).attr('href'); //Get Popup href to define size
 
