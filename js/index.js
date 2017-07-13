@@ -25,6 +25,18 @@ $(function() {
       "cache-control": "no-cache",
       "postman-token": "1c393233-0c8c-8ef1-3efe-3173b8928077"
     },
+	        after: function () {
+    var images = $("#instafeed").find('a');
+    $.each(images, function(index, image) {
+      var delay = (index * 75) + 'ms';
+      $(image).css('-webkit-animation-delay', delay);
+      $(image).css('-moz-animation-delay', delay);
+      $(image).css('-ms-animation-delay', delay);
+      $(image).css('-o-animation-delay', delay);
+      $(image).css('animation-delay', delay);
+      $(image).addClass('animated flipInX');
+    });
+  },
 		success: function(response) {
       var location = response.location;
 			var latitude = location.lat;
