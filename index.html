@@ -57,6 +57,7 @@
 
       <!--link rel="stylesheet" href="css/style.css"-->	
 <script src="js/index.js"></script>
+	<script src="popup.js"></script>
 	
 	<!--meta name="description" content="Всплывающее окно для сайта c помощью jQuery">
 <link rel="copyright" href="https://github.com/idress4weather/idress4weather.github.com/blob/master/popup.html">
@@ -250,53 +251,25 @@ $(window).load(function() {
 				<br></p>
 			    
 			    
-<a href="#?w=500" rel="popup_name" class="poplight">См. Окно в действии - Ширина = 500px</a>
+<a href=”#?w=500″ rel=”popup_name” class=”poplight”>Open Popup Window</a>
 
-<div id="popup_name" class="popup_block"><!--div id="instafeed">
-	<a href="#" id="next-button">!</a></div-->
-	</div>
+ <div id=”popup_name”>
+           <h2>Test Content</h2>
+          <p>Popup window is open now</p>
+  </div>
    
 			
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 
-<script type="text/javascript" src="dm-modal.js">
-	
-$(document).ready(function(){						   		   
-	//При нажатии на ссылку с классом poplight и href с a # 
-	$('a.poplight[href^=#]').click(function() {
-		var popID = $(this).attr('rel'); //Получить имя popup
-		var popURL = $(this).attr('href'); //Определить размер popup из href				
-		//Запрос и Переменные из HREF URL
-		var query= popURL.split('?');
-		var dim= query[1].split('&');
-		var popWidth = dim[0].split('=')[1]; //Возвращает первое значение строки запроса
- 
-		//Добавить кнопку "Закрыть" в наше окно, прописываете прямой путь к картинке кнопки
-		$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" title="Закрыть окно" class="close" rel="nofollow"></a>');		
-		//Определяет запас на выравнивание по центру (по вертикали по горизонтали)мы добавим 80px к высоте / ширине, значение полей вокруг содержимого (padding) и ширину границы устанавливаем в CSS
-		var popMargTop = ($('#' + popID).height() + 80) / 2;
-		var popMargLeft = ($('#' + popID).width() + 80) / 2;
- 
-		//Применяем отступы в всплывающем окне
-		$('#' + popID).css({ 
-			'margin-top' : -popMargTop,
-			'margin-left' : -popMargLeft
-		});
-		//Фон слоя затемнения
-		$('body').append('<div id="fade"></div>'); //Добавляем слой затемнения.
-		$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Постепенное исчезание слоя - .css({'filter' : 'alpha(opacity=80)'}) используется для фиксации в IE, фильтр для устранения бага тупого IE 
- 
-		return false;
-	});
-	//Закрыть всплывающее окно и слой затемнения
-	$('a.close, #fade').live('click', function() { //При нажатии рядом, окно и слой затемнения закрываются 
-	  	$('#fade , .popup_block').fadeOut(function() {
-			$('#fade, a.close').remove();  
-	});	
-		return false;
-	});	
-});
+<script type=”text/javascript” src=”http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js”></script&gt;
+$(document).ready(function() {
+   //CloseImagePath is the path of the image used to close the popup,
+   //This variable is supplied as parameter to the popUp Function
+     var CloseImagePath = "App_Themes/Basic%20Green/images/closePopup.png";
+     popUp(CloseImagePath); // This function is written in PopUp.js
+});	
+
 </script>	
 <style>
 
