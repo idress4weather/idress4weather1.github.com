@@ -363,11 +363,11 @@ $(document).ready(function() {
 				<br></p>
 <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
 			    
-<div class="b-container">
+<div id="b-container">
     Sample Text
     <a href="javascript:PopUpShow()">Show popup</a>
 </div>
-<div class="b-popup" id="popup1">
+<div id="b-popup" id="popup1">
     <div class="b-popup-content">
         Text in Popup
     <a href="javascript:PopUpHide()">Hide popup</a>
@@ -377,7 +377,7 @@ $(document).ready(function() {
 	*{
     font-family: Areal;
 }
-.b-container{
+#b-container{
     width:200px;
     height:150px;
     background-color: #ccc;
@@ -386,7 +386,7 @@ $(document).ready(function() {
     font-size:30px;
     color: #fff;
 }
-.b-popup{
+#b-popup{
     width:100%;
     min-height:100%;
     background-color: rgba(0,0,0,0.5);
@@ -394,7 +394,7 @@ $(document).ready(function() {
     position:fixed;
     top:0px;
 }
-.b-popup .b-popup-content{
+#b-popup #b-popup-content{
     margin:40px auto 0px auto;
     width:100px;
     height: 40px;
@@ -644,7 +644,120 @@ margin: auto;
 
 
 
-
+<!--
+				     BODY
+NAV.navbar navbar-custom navbar-fixed-top
+DIV.container
+DIV.navbar-header
+BUTTON.navbar-toggle
+I.fa fa-bars
+A.navbar-brand page-scroll
+I.fa fa-play-circle
+SPAN.light
+DIV.collapse navbar-collapse navbar-right navbar-main-collapse
+UL.nav navbar-nav
+LI.hidden
+A
+LI
+A.page-scroll
+LI
+A.page-scroll
+LI
+A.page-scroll
+LI
+A.page-scroll
+LI
+A.page-scroll
+LI
+A.page-scroll
+LI
+A.page-scroll
+HEADER.intro
+DIV.intro-body
+DIV.container
+DIV.row
+DIV.col-md-8 col-md-offset-2
+DIV.column column-1
+P.intro-text
+H2
+A
+SPAN
+A
+SPAN
+A
+SPAN
+A
+SPAN
+A
+SPAN
+A
+SPAN
+A
+SPAN
+A
+SPAN
+A
+P
+DIV.b-container
+A
+DIV.b-popup
+DIV.b-popup-content
+A
+STYLE
+STYLE
+DIV
+A
+P.intro-text
+H2
+P
+IMG
+P.location
+P.temp_c
+P.temp_f
+P.wind_dir
+P.text
+IMG.icon
+SECTION.container content-section text-center
+DIV.row
+DIV.col-lg-8 col-lg-offset-2
+H2
+P
+P
+P
+SECTION.content-section text-center
+DIV.download-section
+DIV.container
+DIV.col-lg-8 col-lg-offset-2
+H2
+BUTTON.btn btn-default btn-lg
+SECTION
+DIV.thumb-wrap
+IFRAME
+STYLE
+DIV
+SECTION.container content-section text-center
+DIV.row
+DIV.col-lg-8 col-lg-offset-2
+H2
+P
+UL.list-inline banner-social-buttons
+LI
+A.btn btn-default btn-lg
+I.fa fa-twitter fa-fw
+SPAN.network-name
+LI
+A.btn btn-default btn-lg
+I.fa fa-google-plus fa-fw
+SPAN.network-name
+LI
+A.btn btn-default btn-lg
+I.fa fa-github fa-fw
+SPAN.network-name
+DIV
+FOOTER
+DIV.container text-center
+P
+				     -->
 
 
 </body>
