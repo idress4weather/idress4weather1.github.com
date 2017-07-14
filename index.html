@@ -57,7 +57,7 @@
 
       <!--link rel="stylesheet" href="css/style.css"-->	
 <script src="js/index.js"></script>
-	<script src="popup.html"></script>
+	<!--script src="popup.html"></script-->
 	
 	<!--meta name="description" content="Всплывающее окно для сайта c помощью jQuery">
 <link rel="copyright" href="https://github.com/idress4weather/idress4weather.github.com/blob/master/popup.html">
@@ -278,6 +278,52 @@ $(document).ready(function() {
 });	
 
 </script-->
+	
+	<!--
+<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+			    
+<div id="b-container">
+    Sample Text
+    <a href="javascript:PopUpShow()">Show popup</a>
+</div>
+<div id="b-popup" id="popup1">
+    <div class="b-popup-content">
+        Text in Popup
+    <a href="javascript:PopUpHide()">Hide popup</a>
+    </div>
+</div>	
+<style>
+	*{
+    font-family: Areal;
+}
+#b-container{
+    width:200px;
+    height:150px;
+    background-color: #ccc;
+    margin:0px auto;
+    padding:10px;
+    font-size:30px;
+    color: #fff;
+}
+#b-popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+}
+#b-popup #b-popup-content{
+    margin:40px auto 0px auto;
+    width:100px;
+    height: 40px;
+    padding:10px;
+    background-color: #c5c5c5;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+}
+	</style>
+-->
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -361,49 +407,7 @@ $(document).ready(function() {
  <span><a href="#after 30 hour">after 30 hour</a></span>
  
 				<br></p>
-<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
 			    
-<div id="b-container">
-    Sample Text
-    <a href="javascript:PopUpShow()">Show popup</a>
-</div>
-<div id="b-popup" id="popup1">
-    <div class="b-popup-content">
-        Text in Popup
-    <a href="javascript:PopUpHide()">Hide popup</a>
-    </div>
-</div>	
-<style>
-	*{
-    font-family: Areal;
-}
-#b-container{
-    width:200px;
-    height:150px;
-    background-color: #ccc;
-    margin:0px auto;
-    padding:10px;
-    font-size:30px;
-    color: #fff;
-}
-#b-popup{
-    width:100%;
-    min-height:100%;
-    background-color: rgba(0,0,0,0.5);
-    overflow:hidden;
-    position:fixed;
-    top:0px;
-}
-#b-popup #b-popup-content{
-    margin:40px auto 0px auto;
-    width:100px;
-    height: 40px;
-    padding:10px;
-    background-color: #c5c5c5;
-    border-radius:5px;
-    box-shadow: 0px 0px 10px #000;
-}
-	</style>			    
 <style>
 #instafeed a {
   padding:5px 5px 1px 5px;
